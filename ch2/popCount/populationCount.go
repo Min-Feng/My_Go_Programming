@@ -13,8 +13,14 @@ func init() {
 	}
 }
 
-// PopCount returns the population count (number of set bits) of x.
-// 利用bit shift 將x的bit 右移動,再使用byte()強制轉型 取得x最右邊的8bit
+// PopCount 個人心得:
+// 利用bit shift 
+// 將x的bit表示法 往右移動,再使用byte()強制轉型 取得x最右邊的8個bit
+// 將pc 陣列中 某8個內容值相加 再回傳
+//
+// 若將函式開頭設為大寫
+// 註解中的內容 必須包含函式的名稱 PopCount 
+// 不然格式檢查可能有錯誤
 func PopCount(x uint64) int {
 	return int(pc[byte(x>>(0*8))] +
 		pc[byte(x>>(1*8))] +
@@ -36,5 +42,4 @@ func main() {
 		y := x >> (i * 8)
 		fmt.Printf("%b \t byte>%b\n", y, byte(y))
 	}
-
 }
