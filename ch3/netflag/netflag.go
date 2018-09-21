@@ -27,7 +27,7 @@ func SetBroadcast(v *flags) { *v |= FlagBroadcast }
 func IsCast(v flags) bool { return v&(FlagMulticast|FlagBroadcast) != 0 }
 
 func main() {
-	var v flags = FlagBroadcast | FlagUp
+	var v = FlagBroadcast | FlagUp
 	fmt.Printf("%08b %t \n", v, IsUp(v))
 	TurnDown(&v)
 	fmt.Printf("%08b %t \n", v, IsUp(v))
