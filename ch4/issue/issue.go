@@ -13,9 +13,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(result.TotalCount)
+	fmt.Printf("%[1]d %[2]s\n", result.TotalCount, "issues")
 
-	for i := -0; i < 5; i++ {
-		fmt.Printf("%s %s %q\n", result.Items[i].Title, result.Items[i].User.Login, result.Items[i].UpdateTime)
+	for i := 1; i < 10; i++ {
+		fmt.Printf("%20s %v %s\n", result.Items[i].User.Login, result.Items[i].UpdateTime, result.Items[i].Title)
 	}
 }

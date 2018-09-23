@@ -18,5 +18,6 @@
    要放在不同的資料夾 不然會有衝突
 6. 考慮多種錯誤情況 給予適合的回應
 7. http到回應後，處理錯誤情況，記得都要考慮resp.Body.Close()
+8. 在命令列輸入指令搜尋條件 go run issue.go repo:golang/go is:open json decoder
 
    
